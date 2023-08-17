@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry Genius</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header
+      class="flex justify-between items-center container m-auto h-20 mt-6 px-8"
+    >
+      <div>
+        <h2 class="font-bold text-2xl">Interactive</h2>
+        <h3 class="text-gray-500">Geometry Genius</h3>
+      </div>
+      <div>
+        <button
+          class="bg-[#1090D8] border-2 bold text-white px-6 py-1.5 rounded-lg"
+        >
+          Blog
+        </button>
+      </div>
+    </header>
+
+    <!-- [ Section ] -->
+    <section>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 container m-auto mt-10">
+        <div
+          class="border-2 rounded-md bg-white w-72 h-96 text-center space-y-2"
+        >
+          <div class="flex justify-center items-center mt-5">
+            <img class="w-56" src="./images/triangle.png" alt="triangle" />
+          </div>
+          <h2 class="font-bold text-xl">Triangle</h2>
+          <p>Area(A) = 0.5 x b x h</p>
+          <div class="flex gap-2 justify-center">
+            <input id="triangle-input1"
+              class="w-20 bg-gray-200 rounded"
+              type="text"
+              placeholder=" b"
+            />
+            <label for="">cm</label>
+            <input id="triangle-input2"
+              class="w-20 bg-gray-200 rounded"
+              type="text"
+              placeholder="  h"
+            />
+            <label for="">cm</label>
+          </div>
+          <div class="flex items-center justify-center pt-5">
+            <button
+              class="bg-[#1090D8] text-white font-semibold px-20 py-2 rounded-md"
+              id="triangle-btn"
+            >
+              Calculate
+            </button>
+          </div>
+        </div>
+        <div
+          class="border-2 rounded-md bg-white w-72 h-96 text-center space-y-2"
+        >
+          <div class="flex justify-center items-center mt-5">
+            <img class="w-56" src="./images/rectangle.png" alt="triangle" />
+          </div>
+          <h2 class="font-bold text-xl">Rectangle</h2>
+          <p>Area(A) = w x l</p>
+          <div class="flex gap-2 justify-center">
+            <input id="rectriangle-input1"
+              class="w-20 bg-gray-200 rounded"
+              type="text"
+              placeholder=" w"
+            />
+            <label for="">cm</label>
+            <input id="rectriangle-input2"
+              class="w-20 bg-gray-200 rounded"
+              type="text"
+              placeholder="  l"
+            />
+            <label for="">cm</label>
+          </div>
+          <div class="flex items-center justify-center pt-5">
+            <button onclick="rectangleBtn()"
+              class="bg-[#1090D8] text-white font-semibold px-20 py-2 rounded-md"
+            >
+              Calculate
+            </button>
+          </div>
+        </div>
+        <div
+          class="border-2 rounded-md bg-white w-72 h-96 text-center space-y-2"
+        >
+          <div class="flex justify-center items-center mt-5">
+            <img class="w-56" src="./images/parallelogram.png" alt="triangle" />
+          </div>
+          <h2 class="font-bold text-xl">Parallelogram</h2>
+          <p>Area(A) = 0.5 X b X h</p>
+          <div class="flex gap-2 justify-center">
+            <input
+              class="w-20 bg-gray-200 rounded"
+              type="text"
+              placeholder=" b"
+            />
+            <label for="">cm</label>
+            <input
+              class="w-20 bg-gray-200 rounded"
+              type="text"
+              placeholder="  h"
+            />
+            <label for="">cm</label>
+          </div>
+          <div class="flex items-center justify-center pt-5">
+            <button
+              class="bg-[#1090D8] text-white font-semibold px-20 py-2 rounded-md"
+            >
+              Calculate
+            </button>
+          </div>
+        </div>
+        <!-- Area Calculation -->
+        <div
+          class="border-2 rounded-md bg-white w-72 h-80 text-center space-y-2"
+        >
+            <h2 class="font-bold mt-6"><u>Area Calculation</u></h2>
+        <div class="flex justify-evenly">
+            <p>1.Triangle</p>
+            <p><span id="triangle-display">0</span>cm<sup>2</sup></p>
+            <button class="bg-[#1090D8] text-white font-semibold p-1 rounded-md">convert to m<sup>2</sup></button>
+        </div>
+        <div class="flex justify-evenly">
+            <p>1.Rectangle</p>
+            <p><span id="rectriangle-display">0</span>cm<sup>2</sup></p>
+            <button class="bg-[#1090D8] text-white font-semibold p-1 rounded-md">convert to m<sup>2</sup></button>
+        </div>
+
+           
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>
