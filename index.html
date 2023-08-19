@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geometry Genius</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <header
@@ -26,6 +27,7 @@
 
     <!-- [ Section ] -->
     <section>
+    
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 container m-auto mt-10">
         <div
           class="border-2 rounded-md bg-white w-72 h-96 text-center space-y-2"
@@ -52,7 +54,7 @@
           <div class="flex items-center justify-center pt-5">
             <button
               class="bg-[#1090D8] text-white font-semibold px-20 py-2 rounded-md"
-              id="triangle-btn"
+              onclick="triangleBtn()"
             >
               Calculate
             </button>
@@ -67,13 +69,13 @@
           <h2 class="font-bold text-xl">Rectangle</h2>
           <p>Area(A) = w x l</p>
           <div class="flex gap-2 justify-center">
-            <input id="rectriangle-input1"
+            <input id="rectangle-input1"
               class="w-20 bg-gray-200 rounded"
               type="text"
               placeholder=" w"
             />
             <label for="">cm</label>
-            <input id="rectriangle-input2"
+            <input id="rectangle-input2"
               class="w-20 bg-gray-200 rounded"
               type="text"
               placeholder="  l"
@@ -97,13 +99,13 @@
           <h2 class="font-bold text-xl">Parallelogram</h2>
           <p>Area(A) = 0.5 X b X h</p>
           <div class="flex gap-2 justify-center">
-            <input
+            <input id="parallelogram-input1"
               class="w-20 bg-gray-200 rounded"
               type="text"
               placeholder=" b"
             />
             <label for="">cm</label>
-            <input
+            <input id="parallelogram-input2"
               class="w-20 bg-gray-200 rounded"
               type="text"
               placeholder="  h"
@@ -111,7 +113,7 @@
             <label for="">cm</label>
           </div>
           <div class="flex items-center justify-center pt-5">
-            <button
+            <button onclick="parallelogramBtn()"
               class="bg-[#1090D8] text-white font-semibold px-20 py-2 rounded-md"
             >
               Calculate
@@ -119,26 +121,15 @@
           </div>
         </div>
         <!-- Area Calculation -->
-        <div
+        <div 
           class="border-2 rounded-md bg-white w-72 h-80 text-center space-y-2"
         >
-            <h2 class="font-bold mt-6"><u>Area Calculation</u></h2>
-        <div class="flex justify-evenly">
-            <p>1.Triangle</p>
-            <p><span id="triangle-display">0</span>cm<sup>2</sup></p>
-            <button class="bg-[#1090D8] text-white font-semibold p-1 rounded-md">convert to m<sup>2</sup></button>
-        </div>
-        <div class="flex justify-evenly">
-            <p>1.Rectangle</p>
-            <p><span id="rectriangle-display">0</span>cm<sup>2</sup></p>
-            <button class="bg-[#1090D8] text-white font-semibold p-1 rounded-md">convert to m<sup>2</sup></button>
-        </div>
-
-           
+         <h2 class="font-bold mt-6"><u>Area Calculation</u></h2>
+        <div id="area-container"></div>
           </div>
         </div>
       </div>
     </section>
-    <script src="./index.js"></script>
+    <script src="./index2.js"></script>
   </body>
 </html>
